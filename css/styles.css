@@ -221,6 +221,7 @@ body {
 .doing-list {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .doing-list-item {
