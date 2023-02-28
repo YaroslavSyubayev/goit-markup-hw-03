@@ -67,10 +67,11 @@ body {
 .header {
   display: flex;
   justify-content: space-between;
-  padding: 24px 0 24px 0;
+  /* padding: 24px 0 24px 0; */
   border-bottom: 1px solid var(--accent);
 }
 .header-pages-navigation,
+.header-address-navigation,
 .header-address-list {
   display: flex;
   align-items: center;
@@ -91,6 +92,7 @@ body {
   color: var(--primary-brand);
   font-family: "Raleway", sans-serif;
   font-weight: 800;
+  padding: 24px 0;
   font-size: 18px;
   line-height: 1.33;
   text-decoration: none;
@@ -115,11 +117,16 @@ body {
   letter-spacing: 0.02em;
 }
 
+.header-link.current {
+  color: var(--primary-brand);
+}
+
 .address-link {
   color: var(--text);
   text-decoration: none;
   font-style: normal;
   font-size: 16px;
+  padding: 24px 0;
   line-height: 1.5;
   letter-spacing: 0.02em;
 }
@@ -146,6 +153,7 @@ body {
   letter-spacing: 0.02em;
   color: #ffffff;
   padding-bottom: 48px;
+  display: block;
   max-width: 496px;
   margin: 0 auto;
 }
@@ -158,8 +166,8 @@ body {
   font-family: inherit;
   background-color: var(--primary-brand);
   border: none;
-  width: 169px;
-  height: 56px;
+  min-width: 169px;
+  padding: 16px 32px;
   text-align: center;
   border-radius: 4px;
   display: block;
@@ -174,7 +182,7 @@ body {
 /* Core Points */
 
 .core-points {
-  margin: 120px 0 120px 0;
+  padding: 120px 0;
 }
 
 .core-list {
@@ -213,8 +221,10 @@ body {
 .doing-list {
   display: flex;
   align-items: center;
-  justify-content: center;
-  margin: 72px 0 120px 0;
+}
+
+.doing-list-item {
+  width: 264px;
 }
 
 .doing-list-item:not(:last-child) {
@@ -223,7 +233,7 @@ body {
 
 .team {
   background-color: var(--light);
-  padding-bottom: 120px;
+  padding: 120px 0;
 }
 
 .team-list {
@@ -235,10 +245,16 @@ body {
 .team-list-item {
   width: 264px;
   background-color: var(--white);
+  padding-bottom: 32px;
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-list-item:not(:last-child) {
   margin-right: 24px;
+}
+
+.team-list-text {
+  padding: 32px 16px;
 }
 
 .team-list-name {
@@ -247,7 +263,6 @@ body {
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.02em;
-  margin: 32px 0 8px 0;
   color: var(--dark);
 }
 
@@ -298,20 +313,18 @@ body {
 }
 
 .button-list-item:not(:last-child) {
-  margin-right: 12px;
+  margin-right: 24px;
 }
 
 .work-list {
   display: flex;
   flex-wrap: wrap;
   gap: 48px 24px;
-  padding-top: 72px;
+  margin-top: 72px;
 }
 
 .work-item {
-  width: 360px;
-  flex-basis: calc((100% - 2 * 24) / 3);
-  border: 1px solid var(--accent);
+  flex-basis: calc((100% - 2 * 24px) / 3);
 }
 
 .work-item-title {
@@ -324,7 +337,9 @@ body {
 }
 
 .work-item-descr {
-  padding: 32px 0 32px 16px;
+  padding: 32px 16px;
+  border: 1px solid var(--accent);
+  border-top: none;
 }
 
 .work-item-type {
