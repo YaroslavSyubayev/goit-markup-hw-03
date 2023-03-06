@@ -17,7 +17,5 @@
   "tabWidth": 2,
   "trailingComma": "es5",
   "useTabs": false,
-  "vueIndentScriptAndStyle": false,
-  "filepath": "c:\\Users\\siuba\\Documents\\GitHub-GoIT\\goit-markup-hw-01\\index.html",
-  "parser": "html"
+  "vueIndentScriptAndStyle": false
 }
